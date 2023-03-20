@@ -38,15 +38,17 @@ class ExplorePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        for (var i = 0; i < 5; i++)
+                         for (var i = 0; i < 5; i++)
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
+                                // height: 150.0,
                                 padding: const EdgeInsets.all(10),
+                                margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
                                 decoration: BoxDecoration(
                                     color: Color.fromARGB(255, 245, 244, 247),
-                                    borderRadius: BorderRadius.circular(8)),
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10))),
                                 child: Stack(
                                   children: [
                                     Image.asset(
@@ -54,6 +56,7 @@ class ExplorePage extends StatelessWidget {
                                       height: 80,
                                       width: 120,
                                     ),
+                                    
                                     Container(
                                       margin: const EdgeInsets.only(
                                           left: 5, top: 10),
@@ -69,40 +72,52 @@ class ExplorePage extends StatelessWidget {
                                           fontWeight: FontWeight.normal,
                                           color: const Color(0xFFF7AF4B),
                                         ),
+                                      ),                                   
+                                    ),                                   
+                                  ],
+                                ),
+                              ),
+                              
+                              Container(
+                               decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 245, 244, 247),
+                                   // borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),                                   
+                                    ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(6),
+                                      child: Text(
+                                        "Lagon Sky",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.all(6),
+                                      child: Text(
+                                        "USD 920 ",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.normal,
+                                          color: Color(0xffF7AF4B),
+                                        ),
+                                        textAlign: TextAlign.end,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(6),
-                                    child: Text(
-                                      "Lagon Sky",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.all(6),
-                                    child: Text(
-                                      "USD 920 ",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.normal,
-                                        color: Color(0xffF7AF4B),
-                                      ),
-                                      textAlign: TextAlign.end,
-                                    ),
-                                  ),
-                                ],
-                              ),
                               Container(
+                                width: 140,
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 245, 244, 247),
+                                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),                                   
+                                    ),
                                 padding: const EdgeInsets.all(6),
                                 child: Text(
                                   "800 sq ft.",
@@ -136,12 +151,12 @@ class ExplorePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        for (var i = 0; i <= 10; i++)
+                         for (var i = 0; i <= 10; i++)
                           Padding(
                             padding: const EdgeInsets.only(right: 16),
                             child: Column(
                               children: [
-                                ClipRRect(
+                                ClipRRect(                              
                                   borderRadius: BorderRadius.circular(50),
                                   child: Image.asset(
                                     "assets/images/image_71.png",
@@ -166,6 +181,7 @@ class ExplorePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          
                         // Column(
                         //   children: [
                         //     ClipRRect(
